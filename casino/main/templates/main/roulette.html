@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Прототип сайта с играми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+            background-color: #f0f0f0;
+            position: absolute;
+        }
+        .roulette {
+            width: 450px;
+            height: 500px;
+            margin-left: 750px;
+            background-color: #000;
+            border: 10px solid #bdc3c7;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+        .column {
+            width: 33.33%;
+            height: 100%;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            border-right: 1px solid #fff;
+            box-sizing: border-box;
+        }
+        .number {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: #fff;
+            transform-origin: center bottom;
+        }
+        .actions {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 1200px;
+            top: 250px;
+        }
+        .actions button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #847979;
+            font-size: 16px;
+            cursor: pointer;
+            border: 5px solid transparent;
+        }
+        .actions button:hover{
+            animation: glow 1s linear infinite alternate;
+        }
+        .sidebar {
+            align-self: flex-start;
+            width: 200px;
+            height: 80%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 4px solid;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sidebar a {
+            display: block;
+            margin-bottom: 30px;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            width: 80%;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .sidebar a:last-child {
+            margin-top: 20px;
+        }
+        @keyframes glow {
+            0% {
+                border-color: #e74c3c;
+            }
+            50% {
+                border-color: #fff;
+            }
+            100% {
+                border-color: #e74c3c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/nepoker">Непокер</a>
+        <a href="/TwentyOne">Двадцать одно</a>
+        <a href="/roulette">Рулетка</a>
+        <a href="/">Выход</a>
+    </div>
+    <div class="roulette">
+        <div class="column">
+            <div class="number">1</div>
+        </div>
+        <div class="column">
+            <div class="number">2</div>
+        </div>
+        <div class="column">
+            <div class="number">3</div>
+        </div>
+    </div>
+    <div class="actions">
+        <button>Испытай удачу</button>
+    </div>
+</body>
+</html>

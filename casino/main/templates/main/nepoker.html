@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+
+{% block styles %}
+        .table {
+            width: 700px;
+            height: 450px;
+            border-radius: 50%;
+            background-color: #832121;
+            border: 10px solid #bdc3c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            bottom: 200px;
+            right: 400px;
+            margin: auto;
+            position: absolute;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 680px;
+        }
+        .card {
+            width: 80px;
+            height: 120px;
+            background-color: #3498db;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s ease; /* Добавляем плавное изменение при наведении */
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* При наведении мыши, карты сдвигаются вверх на 5 пикселей */
+        }
+
+        .actions {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+        }
+        .actions button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            background-color: #e74c3c;
+            font-size: 16px;
+            cursor: pointer;
+        }
+{% endblock %}
+
+{% block content %}
+    <div class="table">
+        <div class="cards">
+            <div class="card">A</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+        </div>
+    </div>
+    <div class="actions">
+        <button>Чек</button>
+        <button>Поднять ставку</button>
+    </div>
+{% endblock %}
