@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Прототип сайта с играми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        .table {
+            width: 700px;
+            height: 450px;
+            border-radius: 50%;
+            background-color: #2ecc71; /* Зеленый цвет, замените на свой */
+            border: 10px solid #bdc3c7; /* Бордовый цвет обводки */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 680px;
+        }
+        .card {
+            width: 80px;
+            height: 120px;
+            background-color: #3498db; /* Синий цвет, замените на свой */
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 24px;
+            color: #fff;
+        }
+        .actions {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+        }
+        .actions button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            background-color: #e74c3c; /* Красный цвет, замените на свой */
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .actions button:last-child {
+            margin-top: 10px;
+        }
+        .sidebar {
+            align-self: flex-start;
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .sidebar a:last-child {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#">Блекджек</a>
+        <a href="#">Покер</a>
+        <a href="#">Рулетка</a>
+        <a href="#">Выход</a>
+    </div>
+    <div class="table">
+        <div class="cards">
+            <div class="card">A</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+        </div>
+    </div>
+    <div class="actions">
+        <button>Чек</button>
+        <button>Поднять ставку</button>
+    </div>
+</body>
+</html>
